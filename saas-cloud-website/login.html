@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - SaaS Cloud</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="font-sans text-gray-900 antialiased">
+
+  <!-- HEADER / NAVBAR (no active link - login isn't in the main nav) -->
+  <header class="bg-white sticky top-0 z-50 border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/icons/logo.svg" alt="SaaS Cloud logo" class="h-8 w-8" />
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 font-medium">
+        <li><a href="index.html" class="hover:text-brand transition-colors">Home</a></li>
+        <li><a href="product.html" class="hover:text-brand transition-colors">Product</a></li>
+        <li><a href="pricing.html" class="hover:text-brand transition-colors">Pricing</a></li>
+        <li><a href="features.html" class="hover:text-brand transition-colors">Features</a></li>
+        <li><a href="about.html" class="hover:text-brand transition-colors">About</a></li>
+      </ul>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="login.html" class="border border-brand text-brand rounded-full px-5 py-2 font-semibold">Login</a>
+        <a href="login.html" class="bg-brand text-white rounded-full px-5 py-2 font-semibold hover:bg-brand-dark transition-colors">Sign Up</a>
+      </div>
+
+      <button id="menu-button" class="md:hidden p-2" aria-label="Open menu">
+        <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden px-6">
+      <ul class="flex flex-col gap-4 py-4 font-medium border-t border-gray-100">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="flex gap-3 pb-6">
+        <a href="login.html" class="flex-1 text-center border border-gray-300 rounded-full px-5 py-2 font-semibold">Login</a>
+        <a href="login.html" class="flex-1 text-center bg-brand text-white rounded-full px-5 py-2 font-semibold">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       LOGIN CARD
+       A single rounded card split into two halves:
+       left = dark "welcome" panel, right = the actual form.
+  ========================================================== -->
+  <main class="max-w-5xl mx-auto px-6 py-16">
+    <div class="rounded-3xl overflow-hidden bg-gray-50 md:flex shadow-sm">
+
+      <!-- Left panel -->
+      <div class="bg-black text-white p-10 md:w-1/2 flex flex-col justify-center">
+        <img src="assets/icons/logo-white.svg" alt="SaaS Cloud logo" class="w-12 h-12" />
+        <h1 class="mt-6 text-3xl sm:text-4xl font-extrabold">Welcome Back</h1>
+        <p class="mt-4 text-gray-300">
+          Log in to your account and continue growing your business.
+        </p>
+
+        <ul class="mt-8 space-y-4">
+          <li class="flex items-center gap-3">
+            <span class="w-6 h-6 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
+              <img src="assets/icons/check-white.svg" alt="" class="w-3 h-3" />
+            </span>
+            Access your dashboard
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-6 h-6 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
+              <img src="assets/icons/check-white.svg" alt="" class="w-3 h-3" />
+            </span>
+            Manage your subscriptions
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-6 h-6 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
+              <img src="assets/icons/check-white.svg" alt="" class="w-3 h-3" />
+            </span>
+            View analytics
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-6 h-6 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
+              <img src="assets/icons/check-white.svg" alt="" class="w-3 h-3" />
+            </span>
+            And more...
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right panel: the form -->
+      <div class="bg-white p-10 md:w-1/2 flex flex-col justify-center">
+        <h2 class="text-2xl font-extrabold">Login to Your Account</h2>
+
+        <form id="login-form" class="mt-6 space-y-5">
+          <div>
+            <label for="email" class="font-semibold text-sm">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="name@company.com"
+                   class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <label for="password" class="font-semibold text-sm">Password</label>
+              <!-- Toggled by js/login-form.js -->
+              <button type="button" id="toggle-password" class="text-sm text-gray-500 hover:text-brand">Show</button>
+            </div>
+            <input type="password" id="password" name="password" placeholder="••••••••"
+                   class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
+          </div>
+
+          <div class="text-right">
+            <a href="#" class="text-brand font-semibold text-sm">Forgot password?</a>
+          </div>
+
+          <button type="submit"
+                  class="w-full bg-brand hover:bg-brand-dark transition-colors text-white font-semibold rounded-full px-6 py-3">
+            Login
+          </button>
+
+          <!-- Filled in by js/login-form.js -->
+          <p id="login-status" class="min-h-[1.25rem] text-center"></p>
+
+          <div class="flex items-center gap-3 text-gray-400 text-sm">
+            <span class="flex-1 h-px bg-gray-200"></span>
+            or continue with
+            <span class="flex-1 h-px bg-gray-200"></span>
+          </div>
+
+          <a href="#" class="flex items-center justify-center gap-3 border border-gray-300 rounded-lg px-4 py-3 font-semibold hover:bg-gray-50 transition-colors">
+            <img src="assets/icons/google.svg" alt="" class="w-5 h-5" />
+            Continue with Google
+          </a>
+          <a href="#" class="flex items-center justify-center gap-3 border border-gray-300 rounded-lg px-4 py-3 font-semibold hover:bg-gray-50 transition-colors">
+            <img src="assets/icons/github.svg" alt="" class="w-5 h-5" />
+            Continue with GitHub
+          </a>
+
+          <p class="text-center text-sm text-gray-600">
+            Don't have an account?
+            <a href="#" class="text-brand font-semibold">Sign up</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (same as index.html) -->
+  <footer class="bg-black text-white">
+    <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <a href="index.html">
+        <img src="assets/icons/logo.svg" alt="SaaS Cloud logo" class="h-8 w-8" />
+      </a>
+      <ul class="flex flex-wrap justify-center gap-6 font-medium">
+        <li><a href="index.html" class="hover:text-brand transition-colors">Home</a></li>
+        <li><a href="product.html" class="hover:text-brand transition-colors">Product</a></li>
+        <li><a href="pricing.html" class="hover:text-brand transition-colors">Prices</a></li>
+        <li><a href="features.html" class="hover:text-brand transition-colors">Features</a></li>
+        <li><a href="about.html" class="hover:text-brand transition-colors">About</a></li>
+      </ul>
+      <div class="flex gap-3">
+        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-brand flex items-center justify-center hover:bg-brand-dark transition-colors">
+          <img src="assets/icons/facebook.svg" alt="" class="w-5 h-5" />
+        </a>
+        <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-brand flex items-center justify-center hover:bg-brand-dark transition-colors">
+          <img src="assets/icons/linkedin.svg" alt="" class="w-5 h-5" />
+        </a>
+        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-brand flex items-center justify-center hover:bg-brand-dark transition-colors">
+          <img src="assets/icons/instagram.svg" alt="" class="w-5 h-5" />
+        </a>
+      </div>
+    </div>
+    <div class="border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-gray-400">
+        <p>&copy; 2026 All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="font-semibold text-white hover:text-brand transition-colors">Policy Term</a>
+          <a href="#" class="font-semibold text-white hover:text-brand transition-colors">Terms & Services</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/login-form.js"></script>
+</body>
+</html>

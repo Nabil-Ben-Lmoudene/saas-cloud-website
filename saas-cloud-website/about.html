@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - SaaS Cloud</title>
+  <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="font-sans text-gray-900 antialiased">
+
+  <!-- HEADER / NAVBAR  -->
+  <header class="bg-white sticky top-0 z-50 border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/logo/logo.png" alt="SaaS Cloud logo" class="h-14 w-14" />
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 font-medium">
+        <li><a href="index.html" class="hover:text-brand transition-colors">Home</a></li>
+        <li><a href="product.html" class="hover:text-brand transition-colors">Product</a></li>
+        <li><a href="pricing.html" class="hover:text-brand transition-colors">Pricing</a></li>
+        <li><a href="features.html" class="hover:text-brand transition-colors">Features</a></li>
+        <li><a href="about.html" class="text-brand font-semibold">About</a></li>
+      </ul>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="login.html" class="border border-gray-300 rounded-full px-5 py-2 font-semibold hover:bg-gray-50 transition-colors">Login</a>
+        <a href="login.html" class="bg-brand text-white rounded-full px-5 py-2 font-semibold hover:bg-brand-dark transition-colors">Sign Up</a>
+      </div>
+
+      <!-- Mobile menu button -->
+
+      <button id="menu-button" class="md:hidden p-2" aria-label="Open menu">
+        <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden px-6">
+      <ul class="flex flex-col gap-4 py-4 font-medium border-t border-gray-100">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html" class="text-brand font-semibold">About</a></li>
+      </ul>
+      <div class="flex gap-3 pb-6">
+        <a href="login.html" class="flex-1 text-center border border-gray-300 rounded-full px-5 py-2 font-semibold">Login</a>
+        <a href="login.html" class="flex-1 text-center bg-brand text-white rounded-full px-5 py-2 font-semibold">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="max-w-6xl mx-auto px-6 pt-16 pb-12 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+        We Make SaaS Operations Simpler
+      </h1>
+      <p class="mt-10 text-gray-600">
+        SaaS Cloud was created with one simple idea: growing SaaS teams
+        shouldn't need dozens of disconnected tools to run their business.
+      </p>
+      <p class="mt-4 text-gray-600">
+        Our platform brings essential workflows, business insights, and team
+        collaboration together in one simple cloud environment.
+      </p>
+    </div>
+    <div>
+      <!-- team photo -->
+      <img src="assets/images/team.jpg" alt="SaaS Cloud team working together" class="rounded-2xl w-full object-cover ml-50 mb-10" />
+    </div>
+  </section>
+
+  <!--  STATS ROW -->
+  <section class="max-w-6xl mx-auto px-6 py-7 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div>
+      <p class="text-3xl sm:text-4xl font-extrabold text-brand">10K+</p>
+      <p class="mt-2 text-black-600 text-sm">Users</p>
+    </div>
+    <div>
+      <p class="text-3xl sm:text-4xl font-extrabold text-brand">350+</p>
+      <p class="mt-2 text-black-600 text-sm">Teams</p>
+    </div>
+    <div>
+      <p class="text-3xl sm:text-4xl font-extrabold text-brand">20+</p>
+      <p class="mt-2 text-black-600 text-sm">Countries</p>
+    </div>
+    <div>
+      <p class="text-3xl sm:text-4xl font-extrabold text-brand">99.9%</p>
+      <p class="mt-2 text-black-600 text-sm">Uptime</p>
+    </div>
+  </section>
+
+  <!-- OUR VALUES-->
+  <section class="max-w-6xl mx-auto px-6 py-16 text-center">
+    <h2 class="text-3xl sm:text-4xl font-extrabold">Our Values</h2>
+
+    <div class="mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <img src="assets/icons/group.png" alt="" class="w-14 h-14 mx-auto bg-brand-light rounded-2xl p-3" />
+        <h3 class="mt-5 font-bold text-xl">People First</h3>
+        <p class="mt-4 text-gray-600 text-sm">We build technology around the people who use it.</p>
+      </div>
+      <div>
+        <img src="assets/icons/sparkler.png" alt="" class="w-14 h-14 mx-auto bg-brand-light rounded-2xl p-3" />
+        <h3 class="mt-5 font-bold text-xl">Keep It Simple</h3>
+        <p class="mt-4 text-gray-600 text-sm">Powerful doesn't have to mean complicated.</p>
+      </div>
+      <div>
+        <img src="assets/icons/security.png" alt="" class="w-14 h-14 mx-auto bg-brand-light rounded-2xl p-3" />
+        <h3 class="mt-5 font-bold text-xl">Build With Trust</h3>
+        <p class="mt-4 text-gray-600 text-sm">We treat security, privacy, and reliability seriously.</p>
+      </div>
+      <div>
+        <img src="assets/icons/line-chart.png" alt="" class="w-14 h-14 mx-auto bg-brand-light rounded-2xl p-3" />
+        <h3 class="mt-5 font-bold text-xl">Keep Improving</h3>
+        <p class="mt-4 text-gray-600 text-sm">We continuously improve the platform and the experience we provide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT  -->
+  <section id="contact" class="max-w-3xl mx-auto px-6 text-center">
+    <a href="#contact" class="text-brand font-semibold underline">Contact</a>
+    <h2 class="mt-7 text-3xl sm:text-4xl font-extrabold">Let's Talk About Your SaaS</h2>
+    <p class="mt-6 text-gray-600">
+      Have a question, need help, or want to see how SaaS Cloud can fit your
+      workflow? We'd love to hear from you.
+    </p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6">
+
+    <!-- Contact form -->
+    <form id="contact-form" class="md:col-span-2 bg-gray-50 rounded-2xl p-8 space-y-5">
+      <div>
+        <label for="name" class="font-semibold text-sm">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name"
+               class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
+      </div>
+
+      <div>
+        <label for="email" class="font-semibold text-sm">Email</label>
+        <input type="email" id="email" name="email" placeholder="name@company.com"
+               class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
+      </div>
+
+      <div>
+        <label for="subject" class="font-semibold text-sm">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="How can we help?"
+               class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
+      </div>
+
+      <div>
+        <label for="message" class="font-semibold text-sm">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your message..."
+                  class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand"></textarea>
+      </div>
+
+      <button type="submit"
+              class="w-full bg-brand hover:bg-brand-dark transition-colors text-white font-semibold rounded-full px-6 py-3">
+        Send Message
+      </button>
+
+      <p id="form-status" class="min-h-[1.25rem]"></p>
+    </form>
+
+    <!-- Contact details card -->
+    <div class="bg-brand-light rounded-2xl p-8 space-y-6 h-full">
+      <div class="flex gap-3">
+        <img src="assets/icons/mail.png" alt="" class="w-6 h-6 mt-2" />
+        <div>
+          <p class="font-semibold">Email</p>
+          <p class="text-gray-600 text-sm">hello@saascloud.com</p>
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <img src="assets/icons/call.png" alt="" class="w-6 h-6 mt-2" />
+        <div>
+          <p class="font-semibold">Phone</p>
+          <p class="text-gray-600 text-sm">+60 11-322 2222</p>
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <img src="assets/icons/location.png" alt="" class="w-6 h-6 mt-2" />
+        <div>
+          <p class="font-semibold">Location</p>
+          <p class="text-gray-600 text-sm">Kuala Lumpur, Malaysia</p>
+        </div>
+      </div>
+
+      <div>
+        <p class="font-semibold mb-3">Follow Us</p>
+        <div class="flex gap-3">
+          <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-brand flex items-center justify-center hover:bg-brand-dark transition-colors">
+            <img src="assets/Social Media/Facebook.png" alt="" class="w-9 h-9" />
+          </a>
+          <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-full bg-brand flex items-center justify-center hover:bg-brand-dark transition-colors">
+            <img src="assets/Social Media/LinkedIn.png" alt="" class="w-4 h-4" />
+          </a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-brand flex items-center justify-center hover:bg-brand-dark transition-colors">
+            <img src="assets/Social Media/Instagram.png" alt="" class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as index.html) -->
+  <footer class="bg-black text-white mt-10">
+    <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <a href="index.html">
+        <img src="assets/logo/logo.png" alt="SaaS Cloud logo" class="h-14 w-14" />
+      </a>
+      <ul class="flex flex-wrap justify-center gap-6 font-medium">
+        <li><a href="index.html" class="hover:text-brand transition-colors">Home</a></li>
+        <li><a href="product.html" class="hover:text-brand transition-colors">Product</a></li>
+        <li><a href="pricing.html" class="hover:text-brand transition-colors">Prices</a></li>
+        <li><a href="features.html" class="hover:text-brand transition-colors">Features</a></li>
+        <li><a href="about.html" class="hover:text-brand transition-colors">About</a></li>
+      </ul>
+      <div class="flex gap-3">
+        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-brand flex items-center justify-center hover:bg-brand-dark transition-colors">
+          <img src="assets/Social Media/Facebook.png" alt="" class="w-9 h-9" />
+        </a>
+        <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-brand flex items-center justify-center hover:bg-brand-dark transition-colors">
+          <img src="assets/Social Media/LinkedIn.png" alt="" class="w-5 h-5" />
+        </a>
+        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-brand flex items-center justify-center hover:bg-brand-dark transition-colors">
+          <img src="assets/Social Media/Instagram.png" alt="" class="w-5 h-5" />
+        </a>
+      </div>
+    </div>
+    <div class="border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-gray-400">
+        <p>&copy; 2026 All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="font-semibold text-white hover:text-brand transition-colors">Policy Term</a>
+          <a href="#" class="font-semibold text-white hover:text-brand transition-colors">Terms & Services</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/contact-form.js"></script>
+</body>
+</html>

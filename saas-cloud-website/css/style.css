@@ -1,0 +1,20 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+html {
+  scroll-behavior: smooth; /* smooth scroll when clicking anchor links like #contact */
+}
+
+body {
+  overflow-x: hidden;
+}
+/* Mobile menu: hidden by default, slides down when the "is-open" class is added by nav.js */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#mobile-menu.is-open {
+  max-height: 500px; /* tall enough to fit all the links */
+}
